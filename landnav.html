@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RP0505 Land Navigation — Study Guide</title>
+<style>
+:root{--bg:#f6f5f0;--fg:#1d2117;--mut:#5c6352;--card:#fff;--line:#d8d6c8;--acc:#4b5d2a;--acc2:#8a6b23}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14170f;--fg:#e8e6da;--mut:#a3a794;--card:#1e2218;--line:#343a28;--acc:#9cb464;--acc2:#d0a640}}
+:root[data-theme="dark"]{--bg:#14170f;--fg:#e8e6da;--mut:#a3a794;--card:#1e2218;--line:#343a28;--acc:#9cb464;--acc2:#d0a640}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Georgia,'Times New Roman',serif;padding:0 0 60px}
+header{border-bottom:2px solid var(--acc);padding:22px 18px 0;max-width:900px;margin:0 auto}
+h1{font-size:1.5rem;margin:0 0 2px;letter-spacing:.02em}.sub{color:var(--mut);font-size:.85rem;margin:0 0 14px}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav button{font:inherit;font-size:.9rem;background:none;border:1px solid var(--line);border-bottom:none;border-radius:6px 6px 0 0;padding:8px 14px;color:var(--mut);cursor:pointer}
+nav button[aria-selected=true]{background:var(--card);color:var(--fg);border-color:var(--acc);font-weight:700}
+main{max-width:900px;margin:0 auto;padding:20px 18px}
+h2{font-size:1.12rem;color:var(--acc);border-bottom:1px solid var(--line);padding-bottom:4px;margin:26px 0 8px}
+h3{font-size:.98rem;margin:16px 0 4px}
+ul{margin:6px 0 6px 18px;padding:0}li{margin:3px 0}
+.k{color:var(--acc2);font-weight:700}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:.92rem}
+td,th{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:rgba(128,128,128,.12)}
+.wrap{overflow-x:auto}
+.box{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc2);padding:10px 14px;margin:10px 0;border-radius:0 6px 6px 0}
+#fcard{background:var(--card);border:1px solid var(--line);border-radius:10px;min-height:210px;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;cursor:pointer;font-size:1.1rem}
+.row{display:flex;gap:10px;align-items:center;justify-content:center;margin:12px 0;flex-wrap:wrap}
+button.b{font:inherit;font-size:.9rem;background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 16px;cursor:pointer}
+button.g{background:none;color:var(--fg);border:1px solid var(--line)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:10px 0}
+.q p{margin:0 0 8px;font-weight:700}
+.opt{display:block;margin:3px 0;cursor:pointer;font-weight:400}
+.opt input{margin-right:8px}
+.ok{color:var(--acc);font-weight:700}.no{color:#b4402b;font-weight:700}
+.fb{font-size:.88rem;margin-top:6px}
+.hide{display:none}
+input[type=text]{font:inherit;padding:6px;width:100%;max-width:340px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:5px}
+.sc{font-size:1.1rem;font-weight:700;margin:14px 0}
+img{max-width:100%}
+</style></head><body>
+<header>
+<h1>RP0505 — Land Navigation</h1>
+<p class="sub">Study guide · 30 flashcards · 40-question test with answer key</p>
+<nav role="tablist">
+<button role="tab" aria-selected="true" onclick="tab(0,this)">Study Guide</button>
+<button role="tab" aria-selected="false" onclick="tab(1,this)">Flashcards</button>
+<button role="tab" aria-selected="false" onclick="tab(2,this)">Test</button>
+<button role="tab" aria-selected="false" onclick="tab(3,this)">Answer Key</button>
+</nav>
+</header>
+<main>
+
+<section id="p0">
+<h2>1. The Map</h2>
+<p><span class="k">Purpose:</span> to provide information on the existence, location, and distance between ground features. <span class="k">Definition:</span> a geographic representation of the earth's surface drawn to scale as seen from above.</p>
+<p>A map shows location of ground objects, populated areas, routes of travel, communication lines, extent of vegetation cover, and elevation/relief.</p>
+<p><span class="k">Care:</span> protect from water, mud, and tearing. Mark with light lines that erase cleanly. If trimming, don't cut marginal information. Maps hold tactical information — friendly positions and friendly supply points.</p>
+
+<h3>The Five Basic Colors</h3>
+<div class="wrap"><table><tr><th>Color</th><th>Represents</th></tr>
+<tr><td>Black</td><td>Majority of cultural/man-made features — buildings, bridges, roads not shown in red</td></tr>
+<tr><td>Red</td><td>Main roads, built-up areas, special features such as dangerous or restricted areas</td></tr>
+<tr><td>Blue</td><td>Water — lakes, rivers, swamps, streams</td></tr>
+<tr><td>Green</td><td>Vegetation — woods, orchards</td></tr>
+<tr><td>Red Brown</td><td>All landforms — contours, fills, cuts</td></tr></table></div>
+<p class="sub">Other colors may appear for special information; these are explained in the marginal information.</p>
+
+<h3>Marginal Information</h3>
+<ul>
+<li><span class="k">Sheet Name</span> — center of the upper margin and the lower right margin</li>
+<li><span class="k">Contour Interval</span> — center lower margin; vertical distance between adjacent contour lines</li>
+<li><span class="k">Grid Box</span> — basic instruction on reading grids</li>
+<li><span class="k">Declination Diagram</span> — lower margin; angular relationship of true, grid, and magnetic north</li>
+<li><span class="k">Legend</span> — lower left margin; identifies symbols. Also holds Sheet Name, Sheet Number, Series Name, Edition Number, Index to Boundaries, Index to Adjoining Sheets, Series Number</li>
+<li><span class="k">Bar Scale</span> — center bottom below the map face; meters, yards, statute miles, nautical miles. Zero is <em>not</em> at the end of the scale</li>
+</ul>
+
+<h3>The Three Norths</h3>
+<ul>
+<li><span class="k">True North</span> — a line from any position connecting at the North Pole. All lines of longitude are true north lines.</li>
+<li><span class="k">Magnetic North</span> — direction to the North Magnetic Pole as shown by the compass needle. Located in Canada at Hudson Bay.</li>
+<li><span class="k">Grid North</span> — established by the vertical grid lines on the map. Variation from true north is due to curvature of the earth.</li>
+</ul>
+<div class="box"><span class="k">GM Angle</span> — used to convert magnetic azimuth to grid azimuth and vice versa. <strong>Grid azimuth</strong> is measured from grid north with a protractor. <strong>Magnetic azimuth</strong> is taken from a compass and measured from magnetic north.</div>
+
+<h2>2. Measuring Distance</h2>
+<h3>Straight-line</h3>
+<ul><li>Lay a straight strip of paper so the edge touches the center of both points.</li>
+<li>Tick the paper at each point.</li>
+<li>Lay the strip along the bar scale matching your unit of measure.</li>
+<li>Place the right tick on the largest full unit on the primary scale (right of zero); the remainder falls on the extension scale (left of zero).</li></ul>
+<h3>Curved or irregular</h3>
+<ul><li>Tick near one end of the irregular line.</li>
+<li>Align the strip along the center of the first straight portion.</li>
+<li>Tick the other end of that portion on both strip and map.</li>
+<li>Holding both ticks together, pivot the strip at the second tick until the next straight portion aligns.</li>
+<li>Continue, then read the total on the bar scale.</li></ul>
+
+<h2>3. Protractor</h2>
+<ul><li>All protractors divide the circle into units of angular measure, with a scale around the outer edge and an index mark.</li>
+<li>The <span class="k">index mark</span> is the center of the protractor circle from which all directions are measured.</li>
+<li>The military protractor has two scales: <span class="k">degrees inner</span>, <span class="k">mils outer</span>. It represents the azimuth circle.</li>
+<li>Degree scale graduated 0°–360°; each tick = one degree. The line from 0° to 180° is the <span class="k">base line</span>. Where the base line crosses the horizontal line between 90° and 270° is the index/center.</li>
+<li>In use, the base line is always parallel to a north-south grid line; 0°/360° toward the top (north) of the map, 90° to the right.</li></ul>
+
+<h2>4. The Grid System</h2>
+<p>A network of lines forming squares on the face of the map, like city blocks. Names are all numbers; every tenth line is heavier. Grid line numbers appear within the map on the line itself.</p>
+<div class="wrap"><table><tr><th>Digits</th><th>Identifies</th></tr>
+<tr><td>4-digit</td><td>1,000-meter grid square</td></tr>
+<tr><td>6-digit</td><td>100-meter grid square</td></tr>
+<tr><td>8-digit</td><td>10-meter grid square</td></tr></table></div>
+<div class="box">Rule of map reading: <span class="k">READ RIGHT AND UP.</span></div>
+
+<h2>5. Compass Terms and Concepts</h2>
+<p><span class="k">Azimuth</span> — an angle measured in a clockwise direction from a north base line.</p>
+<ul><li>East = 90° · South = 180° · West = 270° · North = 360° or 0°</li>
+<li>The point the azimuth originates from is imagined as the center of the azimuth circle.</li></ul>
+<h3>Obtaining a grid azimuth</h3>
+<ul><li>Draw a line connecting the two points — A is your present location, B your destination.</li>
+<li>Place the protractor index on point A.</li>
+<li>Ensure the 0°/180° base line is parallel with the vertical grid lines.</li>
+<li>Read the azimuth from the degree (inside) scale — that is the grid azimuth from A to B.</li></ul>
+<div class="box"><span class="k">Back azimuth</span> — the reverse direction of a forward azimuth, like doing an about face. If the azimuth is <strong>less than 180°, add 180°</strong>. If it is <strong>180° or more, subtract 180°</strong>.</div>
+
+<h2>6. Lensatic Compass</h2>
+<p>The primary instrument used to determine and maintain direction during land navigation.</p>
+<h3>Parts (14)</h3>
+<div class="wrap"><table><tr><td>Thumb loop</td><td>Graduated straight edge</td></tr>
+<tr><td>Short luminous line</td><td>Lens</td></tr>
+<tr><td>Luminous sighting dots</td><td>Fixed index line</td></tr>
+<tr><td>Luminous magnetic arrow ("Magnetic North")</td><td>Bezel ring</td></tr>
+<tr><td>Sighting slot</td><td>Cover</td></tr>
+<tr><td>Sighting wire</td><td>Rear sight</td></tr>
+<tr><td>Floating dial (mils and degrees)</td><td>Base</td></tr></table></div>
+<h3>Precautions</h3>
+<ul><li>Handle with care — the dial is delicately balanced and shock can damage it.</li>
+<li>Never take a reading near visible masses of metal or electrical circuits.</li>
+<li>In cold weather carry it in its carrier <em>outside</em> your outer layer; carried against the body it fogs when exposed to cold air.</li></ul>
+<h3>Two methods of holding</h3>
+<p><span class="k">Compass-to-cheek</span> — recommended for determining the azimuth to a distant object.</p>
+<ul><li>Raise the cover (sighting wire) straight up; raise the lens about 45° above the compass glass.</li>
+<li>Turn the thumb loop all the way down, thumb through it, loose fist under the compass with the other hand, raise to eye level.</li>
+<li>Look through the sighting slot and center the sighting wire in it.</li>
+<li>Keep the compass level and sights aligned; rotate your entire body until the sighting wire is on the object.</li>
+<li>Glance down through the lens and read the magnetic azimuth under the fixed index line.</li></ul>
+<p><span class="k">Center-hold</span> — recommended for a predetermined azimuth, day or night.</p>
+<ul><li>No need to remove helmet, weapon, grenades, or magazines so long as they are not near the compass.</li>
+<li>Open the cover until it forms a straight edge; pull the eyepiece to the rearmost position.</li>
+<li>Thumb through the thumb loop, steady base with remaining fingers, other hand forms a solid base.</li>
+<li>Turn your entire body toward the object, point the cover at it, and read the azimuth beneath the black index line.</li></ul>
+<h3>Night use</h3>
+<ul><li>All luminous features are used. The top glass (bezel ring) rotates; <span class="k">each click = 3 degrees</span>.</li>
+<li>30 clicks counterclockwise = 90 degrees.</li>
+<li>Using center-hold, rotate body and compass until the magnetic north-seeking arrow sits directly under the short luminous line.</li>
+<li>March by keeping the arrow and short luminous line aligned, following the luminous dots on the cover.</li></ul>
+
+<h2>7. Orientation of a Map</h2>
+<p>A map is oriented when north and south on the map correspond to north and south on the ground.</p>
+<h3>With a compass</h3>
+<ul><li>Map horizontal; compass straight edge parallel to a north-south grid line, cover pointing toward the top of the map.</li>
+<li>This places the black index line parallel to grid north; the needle points to magnetic north, forming a declination diagram on the compass face.</li>
+<li>Rotate map and compass together until that relationship matches the declination diagram in the map margin.</li>
+<li>Magnetic north <em>left</em> of grid north: compass reading equals the GM angle. Magnetic north <em>right</em> of grid north: compass reading equals 360 minus the GM angle.</li></ul>
+<h3>Without a compass — terrain association</h3>
+<ul><li>Find linear features common to both map and ground: roads, railroads, fence lines, power lines.</li>
+<li>Align the feature on the map with the same feature on the ground.</li>
+<li>Check with two or more features to prevent reversal of direction.</li></ul>
+
+<h2>8. Determining Location by Map and Compass</h2>
+<ul><li><span class="k">Inspection and estimation</span> — usually easiest; carefully survey road systems and topographic features in the immediate vicinity.</li>
+<li><span class="k">Orient the map to the ground</span> — identify a prominent characteristic (road, junction, bridge, stream) visible on the ground and unmistakable on the map.</li></ul>
+
+<h2>9. 90-Degree Offset Method</h2>
+<p>Used to bypass enemy positions or obstacles and stay oriented — detour by moving at right angles for specified distances.</p>
+<div class="box"><span class="k">RALS</span> — <strong>R</strong>ight <strong>A</strong>dd 90 degrees; <strong>L</strong>eft <strong>S</strong>ubtract 90 degrees.</div>
+
+<h2>10. Pace Count</h2>
+<ul><li>Keeps a record of ground distance; recorded in 100-meter increments.</li>
+<li>Step off with the <span class="k">left</span> foot and count every time it hits the deck.</li>
+<li>Record each 100-meter increment by tying a knot in a rope or piece of string.</li></ul>
+<div class="box"><span class="k">Formula:</span> distance ÷ 100 × pace count.<br>Example: 500 m with a 65-pace count → 500 ÷ 100 × 65 = <strong>325 paces</strong>.</div>
+
+<h2>11. Elevation and Relief</h2>
+<p><span class="k">Contour lines</span> indicate elevation and relief. Each is an imaginary line along which all points are at the same elevation above sea level. The contour interval is given in the marginal information. On most maps contours are printed red-brown starting at zero elevation. <span class="k">Every fifth contour line</span> is heavier — an <span class="k">index contour line</span> — and carries the elevation.</p>
+<ul><li>Line spacing indicates the nature of the slope, which has military significance.</li>
+<li>The closer the contour lines, the steeper the terrain.</li></ul>
+
+<h3>The Seven Natural (Land) Formations</h3>
+<div class="wrap"><table><tr><th>Feature</th><th>Description / contour signature</th></tr>
+<tr><td>Hill</td><td>A point or small area of high ground; closed concentric contours</td></tr>
+<tr><td>Valley</td><td>Stream course with at least a limited extent of level ground bordered by higher ground; <strong>U-shaped</strong> contours, the curve of the crossing always points up (upstream)</td></tr>
+<tr><td>Draw</td><td>A less developed stream with essentially no level ground and little or no maneuver room; ground slopes up on each side and toward the head; <strong>V-shaped</strong> contours with the point toward the head of the draw</td></tr>
+<tr><td>Ridge</td><td>A line of high ground with minor variations along its crest; the crest is higher than the ground on both sides</td></tr>
+<tr><td>Saddle</td><td>A dip or low point along the crest of a ridge; not necessarily between two hilltops — may be a dip or break along an otherwise level ridge crest</td></tr>
+<tr><td>Depression</td><td>A low point or sinkhole surrounded on all sides by higher ground</td></tr>
+<tr><td>Cliff</td><td>A vertical or near-vertical slope; too steep to show at the contour interval, so shown by a ticked (carrying) contour line — <strong>ticks always point toward lower ground</strong></td></tr></table></div>
+
+<h2>Reference</h2>
+<p class="sub">Student handout RP0505. Source reference: Map Reading and Land Navigation, FM 3-25.26, Ch 2, 6, 9, 10, 11; ITS (May 2001), pgs 1-18-1 through 1-18-42.</p>
+</section>
+
+<section id="p1" class="hide">
+<div id="fcard" onclick="flip()"></div>
+<div class="row"><button class="b g" onclick="nav(-1)">‹ Prev</button><span id="fcount" class="sub"></span><button class="b g" onclick="nav(1)">Next ›</button><button class="b" onclick="flip()">Flip</button><button class="b g" onclick="shuf()">Shuffle</button></div>
+<p class="sub" style="text-align:center">Tap the card to flip it.</p>
+</section>
+
+<section id="p2" class="hide">
+<p class="sub">40 questions. Answer all, then score. Unscored answers stay hidden.</p>
+<div id="quiz"></div>
+<div class="row"><button class="b" onclick="score()">Score Test</button><button class="b g" onclick="resetT()">Reset</button></div>
+<div id="sc" class="sc"></div>
+</section>
+
+<section id="p3" class="hide">
+<h2>Answer Key</h2>
+<div class="wrap"><table id="key"><tr><th>#</th><th>Answer</th></tr></table></div>
+</section>
+
+</main>
+<script>
+const FC=[
+["Purpose of a military map?","To provide information on the existence, location, and distance between ground features."],
+["Define a map.","A geographic representation of the earth's surface drawn to scale as seen from above."],
+["Name the five basic map colors.","Black, Red, Blue, Green, Red Brown."],
+["What does BLACK represent?","Majority of cultural/man-made features — buildings, bridges, roads not shown in red."],
+["What does RED represent?","Main roads, built-up areas, and special features such as dangerous or restricted areas."],
+["What does BLUE represent?","Water features — lakes, rivers, swamps, streams."],
+["What does GREEN represent?","Vegetation — woods and orchards."],
+["What does RED BROWN represent?","All landforms — contours, fills, and cuts."],
+["Where is the sheet name found?","Center of the upper margin and the lower right margin."],
+["Where is the contour interval found, and what does it state?","Center lower margin; the vertical distance between adjacent contour lines."],
+["Where is the legend located?","Lower left margin."],
+["Where is the declination diagram and what does it show?","Lower margin; the angular relationship of true north, grid north, and magnetic north."],
+["Where is the North Magnetic Pole located?","Canada, at Hudson Bay."],
+["What is grid north?","North established by the vertical grid lines on the map."],
+["What is the GM angle used for?","Converting magnetic azimuth to grid azimuth and vice versa."],
+["Grid azimuth vs magnetic azimuth?","Grid azimuth is measured from grid north with a protractor; magnetic azimuth is taken from a compass and measured from magnetic north."],
+["What two scales does the military protractor have?","Degrees on the inner scale, mils on the outer scale."],
+["What is the protractor base line?","The line from 0° to 180°; it is always oriented parallel to a north-south grid line."],
+["What do 4, 6, and 8 digit grids identify?","4 = 1,000-meter square; 6 = 100-meter square; 8 = 10-meter square."],
+["State the rule of map reading.","READ RIGHT AND UP."],
+["Define azimuth.","An angle measured in a clockwise direction from a north base line."],
+["Azimuths for E, S, W, N?","East 90°, South 180°, West 270°, North 360° or 0°."],
+["How do you compute a back azimuth?","If less than 180°, add 180°. If 180° or more, subtract 180°."],
+["Two methods of holding the lensatic compass?","Compass-to-cheek and center-hold."],
+["When is compass-to-cheek used?","Determining the azimuth to a distant object."],
+["When is center-hold used?","Following a predetermined azimuth, both day and night."],
+["How many degrees per bezel ring click?","Three degrees — 30 clicks equals 90 degrees."],
+["What is RALS?","Right Add, Left Subtract 90 degrees — the 90-degree offset method for bypassing obstacles."],
+["Pace count formula?","Distance ÷ 100 × pace count. Step off with the left foot; record in 100-meter increments with knots in a string."],
+["Name the seven land formations.","Hill, valley, draw, ridge, saddle, depression, cliff."],
+["Valley vs draw contours?","Valley contours are U-shaped with the curve pointing up; draw contours are V-shaped with the point toward the head of the draw."],
+["What is an index contour line?","Every fifth contour line, printed heavier, with the elevation given along it."],
+["What does close contour spacing mean?","The terrain is steeper."],
+["How are cliffs shown?","By a ticked carrying contour line; the ticks always point toward lower ground."],
+["How do you orient a map without a compass?","Terrain association — align two or more linear features (roads, railroads, fence lines, power lines) on the map with the same features on the ground."]
+];
+const Q=[
+["The purpose of a military map is to provide information on the existence, location, and __ between ground features.",["elevation","distance","declination","azimuth"],1],
+["A map is a geographic representation of the earth's surface drawn to scale as seen from:",["ground level","above","the side","an oblique angle"],1],
+["How many basic colors are on a standard large-scale topographic map?",["three","four","five","seven"],2],
+["Which color shows water features?",["Green","Blue","Black","Red Brown"],1],
+["Which color shows vegetation such as woods and orchards?",["Green","Blue","Red","Black"],0],
+["Which color shows all landforms — contours, fills, and cuts?",["Black","Red","Red Brown","Green"],2],
+["Main roads, built-up areas, and restricted areas are shown in:",["Black","Red","Blue","Green"],1],
+["Buildings, bridges, and roads not shown in red are printed in:",["Black","Blue","Green","Red Brown"],0],
+["Special colors not among the basic five are explained in the:",["legend only","margin of information","grid box","bar scale"],1],
+["The sheet name is found in the center of the upper margin and the:",["lower left margin","lower right margin","center lower margin","upper right margin"],1],
+["The contour interval appears in the:",["center lower margin","lower left margin","upper margin","grid box"],0],
+["The declination diagram indicates the angular relationship of:",["grid and magnetic north only","true, grid, and magnetic north","true and magnetic north only","the GM angle and the bar scale"],1],
+["All lines of longitude are lines of:",["grid north","magnetic north","true north","declination"],2],
+["The North Magnetic Pole is located in:",["Greenland","Alaska","Canada at Hudson Bay","Siberia"],2],
+["The variation between grid north and true north is due to:",["magnetic interference","curvature of the earth","map scale","the GM angle"],1],
+["A grid azimuth is measured with a:",["compass","protractor","bar scale","coordinate scale"],1],
+["A magnetic azimuth is taken from a:",["protractor","compass","map margin","paper strip"],1],
+["The legend is located in the:",["lower left margin","upper margin","center bottom","lower right margin"],0],
+["On the bar scale, zero is located:",["at the left end","at the right end","not at the end of the scale","at the center of the map"],2],
+["When measuring straight-line distance, the right tick mark is placed on:",["zero","the extension scale","the largest full unit on the primary scale","the far right end"],2],
+["The military protractor's inner scale is in:",["mils","degrees","meters","grads"],1],
+["Each tick mark on the protractor degree scale represents:",["one mil","one degree","five degrees","ten degrees"],1],
+["The protractor base line is the line from:",["90° to 270°","0° to 90°","0° to 180°","180° to 360°"],2],
+["When using a protractor, the base line is oriented parallel to:",["the bar scale","a north-south grid line","an east-west grid line","the declination diagram"],1],
+["On a grid, every ___ line is made heavier in weight.",["fifth","tenth","hundredth","second"],1],
+["An eight-digit grid coordinate identifies a grid square of:",["1,000 meters","100 meters","10 meters","1 meter"],2],
+["A six-digit grid coordinate identifies a grid square of:",["1,000 meters","100 meters","10 meters","1 meter"],1],
+["The rule of map reading is:",["read up and right","read left and down","read right and up","read north and east"],2],
+["An azimuth is measured in which direction from a north base line?",["counterclockwise","clockwise","either direction","from magnetic north only"],1],
+["Due west is an azimuth of:",["90°","180°","270°","360°"],2],
+["The back azimuth of 45 degrees is:",["135°","225°","315°","90°"],1],
+["The back azimuth of 200 degrees is:",["20°","380°","110°","280°"],0],
+["Which holding method is recommended for determining the azimuth to a distant object?",["center-hold","compass-to-cheek","waist carry","offset hold"],1],
+["In the compass-to-cheek method, the lens is raised about how far above the compass glass?",["15 degrees","30 degrees","45 degrees","90 degrees"],2],
+["Each click of the bezel ring equals:",["one degree","three degrees","five degrees","ten degrees"],1],
+["To set a magnetic azimuth of 90 degrees at night, turn the bezel:",["30 clicks left","30 clicks right","90 clicks left","45 clicks left"],0],
+["The 90-degree offset method uses the formula:",["RALS — Right Add, Left Subtract","LARS — Left Add, Right Subtract","RASL — Right Add, Same Left","add 180 degrees"],0],
+["When keeping a pace count you step off with which foot?",["right","left","either","both"],1],
+["A Marine must travel 500 meters and has a pace count of 65. How many paces?",["130","325","650","500"],1],
+["Contour lines indicating a draw are:",["U-shaped","V-shaped","closed circles","ticked lines"],1]
+];
+let i=0,flipped=false,order=FC.map((_,n)=>n);
+function draw(){const c=FC[order[i]];document.getElementById('fcard').textContent=flipped?c[1]:c[0];document.getElementById('fcard').style.color=flipped?'var(--acc)':'var(--fg)';document.getElementById('fcount').textContent=(i+1)+' / '+FC.length}
+function flip(){flipped=!flipped;draw()}
+function nav(d){i=(i+d+FC.length)%FC.length;flipped=false;draw()}
+function shuf(){order.sort(()=>Math.random()-.5);i=0;flipped=false;draw()}
+const qd=document.getElementById('quiz');
+Q.forEach((q,n)=>{let h='<div class="q"><p>'+(n+1)+'. '+q[0]+'</p>';q[1].forEach((o,j)=>{h+='<label class="opt"><input type="radio" name="q'+n+'" value="'+j+'">'+String.fromCharCode(97+j)+') '+o+'</label>'});h+='<div class="fb hide" id="f'+n+'"></div></div>';qd.insertAdjacentHTML('beforeend',h)});
+function score(){let s=0;Q.forEach((q,n)=>{const p=document.querySelector('input[name=q'+n+']:checked');const f=document.getElementById('f'+n);f.classList.remove('hide');if(p&&+p.value===q[2]){s++;f.innerHTML='<span class="ok">Correct.</span>'}else{f.innerHTML='<span class="no">Incorrect.</span> Answer: '+String.fromCharCode(97+q[2])+') '+q[1][q[2]]}});const pc=Math.round(s/Q.length*100);document.getElementById('sc').textContent='Score: '+s+' / '+Q.length+'  ('+pc+'%) — '+(pc>=80?'PASS':'Review and retest')}
+function resetT(){document.querySelectorAll('#quiz input').forEach(x=>x.checked=false);document.querySelectorAll('.fb').forEach(x=>x.classList.add('hide'));document.getElementById('sc').textContent=''}
+const kt=document.getElementById('key');Q.forEach((q,n)=>{kt.insertAdjacentHTML('beforeend','<tr><td>'+(n+1)+'</td><td><strong>'+String.fromCharCode(97+q[2])+'</strong>) '+q[1][q[2]]+'</td></tr>')});
+function tab(n,b){[0,1,2,3].forEach(x=>document.getElementById('p'+x).classList.toggle('hide',x!==n));document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');window.scrollTo(0,0)}
+draw();
+</script></body></html>
